@@ -2,9 +2,10 @@
   <div id="app">
     <div class="main">
       <div class="main__wrapper">
-        <t-title>ToDo Список задач</t-title>
+        <t-title>{{ title }}</t-title>
         <div class="todo">
-          <t-input v-model="title"></t-input>
+          <t-form></t-form>
+          <t-task-list></t-task-list>
         </div>
         <div class="contacts">
           В. Жегалов |
@@ -18,20 +19,20 @@
 <script>
 import tTitle from "./components/todo/tTitle";
 import tForm from "./components/todo/tForm";
-import tInput from "./components/todo/tInput";
+import tTaskList from "./components/todo/tTaskList";
 
 export default {
   name: "app",
   data() {
     return {
-      title: ""
+      title: "Список задач"
     };
   },
   components: {
     tTitle,
     tForm,
-    tInput
-  }
+    tTaskList
+  },
 };
 </script>
 
@@ -44,8 +45,8 @@ body {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  background: linear-gradient(-45deg, #d3cce3, #e9e4f0);
+  color: #333;
+  background: linear-gradient(#fff, #eef2f7);
   box-sizing: box-sizing;
 }
 .main {
@@ -56,15 +57,17 @@ body {
   height: 100vh;
 }
 .main__wrapper {
-  width: 600px;
+  width: 500px;
 }
 .todo {
   background: #fff;
-  padding: 15px;
+  padding: 24px;
   margin: 15px 0;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  border: solid 3px #e6e9ef;
+  box-shadow: 0 0 20px 0px #e2e2e2;
 }
 .contacts {
   text-align: center;

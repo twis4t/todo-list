@@ -1,4 +1,5 @@
-/*
-export const someGetter = (state) => {
-}
-*/
+export default {
+  getTaskList: state => {
+    return state.taskList;
+  }
+};
