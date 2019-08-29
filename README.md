@@ -1,29 +1,31 @@
 # todolist
 
-## Project setup
+## Установка приложения
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Development сборка
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Production сборка
 ```
 npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+###Напишите веб-приложение ToDo-List без использования сервера.
+**Приложение должно обеспечивать следующую функциональность:** 
+* Добавить задачу с названием 
+* Список задач отсортирован в обратном порядке по названию задачи 
+* Редактировать задачу 
+* Отметьте задачу как выполненную 
+* Удалить задачу 
+* Реализовать возможность сохранения задач после обновления страницы браузера (Local Storage или Session Storage) 
+* Использовать Vuex. 
+* Предусмотреть возможность расширения функционала 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###Требования: 
+* Тестовая задача должна быть представлена в виде Git-репозитория с историей изменений. Проект должен быть размещен на GitHub. 
+* Приложение должно быть написано на Vue.js
