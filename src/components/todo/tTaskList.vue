@@ -9,11 +9,15 @@
           <div class="task-item__title">{{ task.title }}</div>
           <div class="task-item__description">{{ task.description }}</div>
         </div>
-        <div class="task-item__control" @click="setEditId(task.id)"><font-awesome-icon icon="edit" /></div>
-        <div class="task-item__control" @click="removeTask(task.id)"><font-awesome-icon icon="trash-alt" /></div>
+        <div class="task-item__control" @click="setEditId(task.id)">
+          <font-awesome-icon icon="edit" />
+        </div>
+        <div class="task-item__control" @click="removeTask(task.id)">
+          <font-awesome-icon icon="trash-alt" />
+        </div>
       </div>
       <div v-if="task.id === editId" class="task-item__edit-form">
-        <t-form @submit="editId = 0" :task="{...task}"></t-form>
+        <t-form @submit="editId = 0" :task="{ ...task }"></t-form>
       </div>
     </div>
   </div>
@@ -27,7 +31,7 @@ export default {
   name: "t-task-list",
   components: {
     tCheckBox,
-    tForm,
+    tForm
   },
   data() {
     return {
@@ -41,12 +45,12 @@ export default {
     },
     /** Открываем форму редактирования для задачи с указанным ID */
     setEditId(id) {
-      this.editId = this.editId === id ? 0 : id
+      this.editId = this.editId === id ? 0 : id;
     },
     /** Удалить задачу */
     removeTask(id) {
       this.$store.dispatch("tasks/removeTask", id);
-    },
+    }
   },
   computed: {
     taskList: {
@@ -60,7 +64,7 @@ export default {
 </script>
 
 <style scoped>
-.task-list{
+.task-list {
   max-height: 600px;
   overflow: auto;
 }
@@ -87,7 +91,7 @@ export default {
 .task-item__control svg {
   cursor: pointer;
 }
-.task-item__edit-form{
+.task-item__edit-form {
   margin: 15px 0 0 0;
 }
 .task-item__content_completed {

@@ -1,6 +1,5 @@
 <template>
-  <div :title="title" :class="['checkbox', value ? 'checkbox_checked' : '']" @click="change()">
-  </div>
+  <div :title="title" :class="['checkbox', value ? 'checkbox_checked' : '']" @click="change()"></div>
 </template>
 
 <script>
@@ -33,7 +32,7 @@ export default {
   },
   watch: {
     checked() {
-      this.value = this.checked
+      this.value = this.checked;
     }
   }
 };
@@ -41,7 +40,7 @@ export default {
 
 <style scoped>
 .checkbox {
-  transition: all .2s;
+  transition: all 0.2s;
   height: 20px;
   width: 20px;
   cursor: pointer;

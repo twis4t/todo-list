@@ -67,7 +67,7 @@ export default {
           this.currentTask.description = "";
           this.currentTask.id = 0;
         }
-        this.$emit('submit', this.currentTask)
+        this.$emit("submit", this.currentTask);
       }
     },
     /** Сохранение задачи */
@@ -78,7 +78,7 @@ export default {
     editTask(task) {
       this.$store.dispatch("tasks/editTask", { ...task });
     }
-  },
+  }
 };
 </script>
 
